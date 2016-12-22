@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MRo-hy-T1f">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="cuO-Qb-jaJ">
+            <objects>
+                <viewController id="MRo-hy-T1f" customClass="ViewController" customModule="xmpp111" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3no-KS-oMS"/>
+                        <viewControllerLayoutGuide type="bottom" id="a8p-re-x5i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fF5-pJ-t5k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message hare" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylQ-kX-OhT">
+                                <rect key="frame" x="20" y="82" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxF-3t-0zY">
+                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tzi-nL-r9z"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm1-r6-n1W">
+                                <rect key="frame" x="113" y="127" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="64m-m7-ESi"/>
+                                    <constraint firstAttribute="width" constant="149" id="jK9-z6-3l9"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="btnSendMessahe" destination="MRo-hy-T1f" eventType="touchUpInside" id="pUU-Kq-hq9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ylQ-kX-OhT" firstAttribute="leading" secondItem="PxF-3t-0zY" secondAttribute="leading" id="2ae-GO-3VE"/>
+                            <constraint firstItem="PxF-3t-0zY" firstAttribute="leading" secondItem="fF5-pJ-t5k" secondAttribute="leading" constant="20" id="9tU-J1-dng"/>
+                            <constraint firstItem="Nm1-r6-n1W" firstAttribute="top" secondItem="ylQ-kX-OhT" secondAttribute="bottom" constant="15" id="NqR-Xl-dWF"/>
+                            <constraint firstAttribute="trailing" secondItem="PxF-3t-0zY" secondAttribute="trailing" constant="20" id="UNc-pJ-YFk"/>
+                            <constraint firstItem="ylQ-kX-OhT" firstAttribute="trailing" secondItem="PxF-3t-0zY" secondAttribute="trailing" id="ZDB-80-akS"/>
+                            <constraint firstItem="ylQ-kX-OhT" firstAttribute="top" secondItem="PxF-3t-0zY" secondAttribute="bottom" constant="12" id="mN0-qS-8H0"/>
+                            <constraint firstItem="PxF-3t-0zY" firstAttribute="top" secondItem="3no-KS-oMS" secondAttribute="bottom" constant="20" id="nwT-5B-HLm"/>
+                            <constraint firstItem="Nm1-r6-n1W" firstAttribute="centerX" secondItem="fF5-pJ-t5k" secondAttribute="centerX" id="sBz-uh-TS1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtMsg" destination="ylQ-kX-OhT" id="6gr-UP-9yU"/>
+                        <outlet property="txtUserName" destination="PxF-3t-0zY" id="DPv-PP-6Ec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NzB-lM-nwZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="123.59154929577466"/>
+        </scene>
+    </scenes>
+</document>
